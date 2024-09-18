@@ -5,26 +5,27 @@
     </a>
 </p>
 
-
 ## Translations:
 
-* [English](README.md)
-* [German](translations/README-de.md)
-* [Español](translations/README-es.md)
-* [Français](translations/README-fr.md)
-* [Português do Brasil](translations/README-pt_BR.md)
-* [中文版](translations/README-cn.md)
-* [日本語](translations/README-ja.md)
-* [한국어](translations/README-ko.md)
-* [Turkish](translations/README-tr.md)
-* [Greek](translations/README-gr.md)
-* [Magyar](translations/README-hu.md)
-* [Polish](translations/README-pl.md)
-* [Русский](translations/README-ru.md)
-* [Tiếng Việt](translations/README-vn.md)
-* [فارسی](translations/README-fa.md)
-* [עברית](translations/README-he.md)
+- [English](README.md)
+- [German](../translations/README-de.md)
+- [Español](../translations/README-es.md)
+- [Français](../translations/README-fr.md)
+- [Português do Brasil](../translations/README-pt_BR.md)
+- [中文版](../translations/README-cn.md)
+- [日本語](../translations/README-ja.md)
+- [한국어](../translations/README-ko.md)
+- [Turkish](../translations/README-tr.md)
+- [Greek](../translations/README-gr.md)
+- [Magyar](../translations/README-hu.md)
+- [Polish](../translations/README-pl.md)
+- [Русский](../translations/README-ru.md)
+- [Tiếng Việt](../translations/README-vn.md)
+- [العربية](../translations/README-ar.md)
 
+- [فارسی](../translations/README-fa.md)
+
+- [עברית](../translations/README-he.md)
 
 ## Cosa sono le Espressioni Regolari?
 
@@ -36,11 +37,11 @@
 
 > Un'espressione regolare è un insieme di caratteri e simboli utilizzati per trovare una specifica sequenza (pattern) di testo.
 
-
 Un'espressione regolare è una sequenza che corrisponde a una stringa di testo letta da sinistra a destra. Le espressioni regolari sono utilizzate per sostituire parti di testo in una stringa, validare moduli, estrarre parti di stringhe basate sulla corrispondenza di uno schema e molto altro. Il termine "Espressione regolare" è molto lungo quindi è normalmente abbreviato con "regex" o "regexp".
 
 Immagina che stai scrivendo un applicazione e hai bisogno di impostare una regola per quando un utente sceglie il suo nome utente. Vogliamo consentire che il nome utente contenga lettere, numeri, carattere di sottolineo e il trattino, vogliamo inoltre limitare il numero di caratteri del nome utente. Possiamo utilizzare la seguente espressione regolare per validare il nome utente:
 <br/><br/>
+
 <p align="center">
   <img src="./img/regexp-en.png" alt="Regular expression">
 </p>
@@ -60,7 +61,7 @@ L'espressione regolare riportata sopra può accettare le stringhe `john_doe`, `j
     - [Carattere Punto di Domanda](#233-the-question-mark)
   - [Parentesi](#24-braces)
   - [Raggruppamento e cattura di caratteri](#25-capturing-groups)
-      - [Raggruppamento di caratteri senza cattura](#251-non-capturing-groups)
+    - [Raggruppamento di caratteri senza cattura](#251-non-capturing-groups)
   - [Alternativa](#26-alternation)
   - [Carattere speciale Escape](#27-escaping-special-characters)
   - [Ancore](#28-anchors)
@@ -101,20 +102,20 @@ Le espressioni regolari sono normalmente sensibili a caratteri maiuscoli e minus
 
 I caratteri jolly sono i mattoncini per la costruzione di espressioni regolari. I caratteri jolly non vengono usati letteralmente, vengono invece interpretati come caratteri speciali. Alcuni caratteri jolly hanno un significato speciale se inseriti all'interno di parentesi quadre. I caratteri jolly sono i seguenti:
 
-|Carattere jolly|Descrizione|
-|:----:|----|
-|.|Il punto corrisponde ad ogni carattere eccetto l'invio e l'interruzione di riga.|
-|[ ]|Classe di caratteri. Corrispondenza con ciascun carattere contenuto tra le parentesi.|
-|[^ ]|Negazione di classe di caratteri. Corrispondenza con ciascun carattere non contenuto all'interno delle parentesi|
-|*|Corrispondenza con zero o più ripetizioni del carattere che lo precede.|
-|+|Corrispondenza con una o più ripetizioni del carattere che lo precede|
-|?|Rende opzionale il carattere che lo precede.|
-|{n,m}|Parentesi graffe. Corrisponde con le ripetizione minima di "n" ma non più di "m", del carattere che le precede.|
-|(xyz)|Gruppo di caratteri. Corrispondenza con i caratteri tra parentesi xyz solo nell'ordine esatto.|
-|&#124;|Alternativa. Corrispondenza con il carattere che precede o con quello che segue.|
-|&#92;|Escape sul carattere successivo. Consente la corrispondenza con i caratteri riservati <code>[ ] ( ) { } . * + ? ^ $ \ &#124;</code>|
-|^|Corrispondenza con l'inizio del testo.|
-|$|Corrispondenza con la fine del testo.|
+| Carattere jolly | Descrizione                                                                                                                          |
+| :-------------: | ------------------------------------------------------------------------------------------------------------------------------------ |
+|        .        | Il punto corrisponde ad ogni carattere eccetto l'invio e l'interruzione di riga.                                                     |
+|       [ ]       | Classe di caratteri. Corrispondenza con ciascun carattere contenuto tra le parentesi.                                                |
+|      [^ ]       | Negazione di classe di caratteri. Corrispondenza con ciascun carattere non contenuto all'interno delle parentesi                     |
+|       \*        | Corrispondenza con zero o più ripetizioni del carattere che lo precede.                                                              |
+|        +        | Corrispondenza con una o più ripetizioni del carattere che lo precede                                                                |
+|        ?        | Rende opzionale il carattere che lo precede.                                                                                         |
+|      {n,m}      | Parentesi graffe. Corrisponde con le ripetizione minima di "n" ma non più di "m", del carattere che le precede.                      |
+|      (xyz)      | Gruppo di caratteri. Corrispondenza con i caratteri tra parentesi xyz solo nell'ordine esatto.                                       |
+|     &#124;      | Alternativa. Corrispondenza con il carattere che precede o con quello che segue.                                                     |
+|      &#92;      | Escape sul carattere successivo. Consente la corrispondenza con i caratteri riservati <code>[ ] ( ) { } . \* + ? ^ $ \ &#124;</code> |
+|        ^        | Corrispondenza con l'inizio del testo.                                                                                               |
+|        $        | Corrispondenza con la fine del testo.                                                                                                |
 
 ## 2.1 Il punto
 
@@ -180,7 +181,7 @@ Il simbolo `*` più essere applicato al carattere jolly `.` per la corrispondenz
 
 ### 2.3.2 Simbolo Più
 
-Il simbolo `+` corrisponde a una o più ripetizioni della sequenza precedente. Ad esempio, l'espressione regolare `c.+t` corrisponde a: una lettera minuscola `c`, seguita da almeno un carattere, seguito dalla lettera minuscola `t`. 
+Il simbolo `+` corrisponde a una o più ripetizioni della sequenza precedente. Ad esempio, l'espressione regolare `c.+t` corrisponde a: una lettera minuscola `c`, seguita da almeno un carattere, seguito dalla lettera minuscola `t`.
 È importante chiarire che `t` corrisponde all'ultima lettera `t` nella stringa.
 
 <pre>
@@ -232,7 +233,7 @@ Si può omettere il secondo numero. Ad esempio, l'espressione regolare `[0-9]{2,
 
 ## 2.5 Raggruppamento e cattura di caratteri
 
-Un gruppo di caratteri è un sottoschema scritto all'interno di parentesi `(...)`. Come esposto in precedenza, se inseriamo un quantificatore a seguito di un carattere, viene definita la ripetizione del carattere stesso; allo stesso modo, se inseriamo un quantificatore a seguito di un gruppo di caratteri, definiamo la ripetizione dell'intero gruppo. Ad esempio, l'espressione regolare `(ab)*` corrisponde a zero o più ripetizioni della sequenza esatta di lettere minuscole "ab". 
+Un gruppo di caratteri è un sottoschema scritto all'interno di parentesi `(...)`. Come esposto in precedenza, se inseriamo un quantificatore a seguito di un carattere, viene definita la ripetizione del carattere stesso; allo stesso modo, se inseriamo un quantificatore a seguito di un gruppo di caratteri, definiamo la ripetizione dell'intero gruppo. Ad esempio, l'espressione regolare `(ab)*` corrisponde a zero o più ripetizioni della sequenza esatta di lettere minuscole "ab".
 Si può inoltre utilizzare il carattere di alternativa `|` all'interno di un gruppo di caratteri.
 Ad esempio, l'espressione regolare `(c|g|p)ar` corrisponde a: una lettera minuscola a scelta tra `c`, `g` o `p`, seguita dalla lettera minuscola `a`, seguite dalla lettera minuscola `r`.
 
@@ -286,7 +287,7 @@ Ad esempio, l'espressione regolare `.` è utilizzata per la corrispondenza con q
 
 Nelle espressioni regolari, si usano le ancore per la corrispondenza dell'espressione stessa, all'inizio o al termine di un testo.
 Le ancora sono di due tipi:
-Il primo tipo è il carattere di negazione `^`  che verifica la corrispondenza all'inizio del testo, il secondo tipo è il carattere `$` che verifica la corrispondenza al termine del testo.
+Il primo tipo è il carattere di negazione `^` che verifica la corrispondenza all'inizio del testo, il secondo tipo è il carattere `$` che verifica la corrispondenza al termine del testo.
 
 ### 2.8.1 Il carattere di negazione ^
 
@@ -321,30 +322,30 @@ Il simbolo del collario `$` è utilizzato per verificare la corrispondenza con l
 
 [Verifica l'espressione regolare](https://regex101.com/r/t0AkOd/1)
 
-##  3. Classe di caratteri rapide
+## 3. Classe di caratteri rapide
 
 Ci sono alcune classe di caratteri rapide per l'utilizzo nelle espressioni regolari:
 
-|Classe di caratteri rapide|Descrizione|
-|:----:|----|
-|.|Qualsiasi carattere tranne invio e fine riga|
-|\w|Corrispondenza con caratteri alfanumerici: `[a-zA-Z0-9_]`|
-|\W|Corrispondenza con caratteri non alfanumerici: `[^\w]`|
-|\d|Corrispondenza con numeri: `[0-9]`|
-|\D|Corrispondenza con caratteri che non siano numeri: `[^\d]`|
-|\s|Corrispondenza con spazi vuoti: `[\t\n\f\r\p{Z}]`|
-|\S|Corrispondenza con caratteri che non siano spazi vuoti: `[^\s]`|
+| Classe di caratteri rapide | Descrizione                                                     |
+| :------------------------: | --------------------------------------------------------------- |
+|             .              | Qualsiasi carattere tranne invio e fine riga                    |
+|             \w             | Corrispondenza con caratteri alfanumerici: `[a-zA-Z0-9_]`       |
+|             \W             | Corrispondenza con caratteri non alfanumerici: `[^\w]`          |
+|             \d             | Corrispondenza con numeri: `[0-9]`                              |
+|             \D             | Corrispondenza con caratteri che non siano numeri: `[^\d]`      |
+|             \s             | Corrispondenza con spazi vuoti: `[\t\n\f\r\p{Z}]`               |
+|             \S             | Corrispondenza con caratteri che non siano spazi vuoti: `[^\s]` |
 
 ## 4. Guardarsi intorno
 
-Lookbehinds e lookaheads sono speciali tipi di ***gruppi di caratteri senza cattura***. Guardarsi intorno sono utilizzati quando uno schema deve essere preceduto o seguito da un altro schema. Ad esempio, pensiamo di dover selezionare i numeri preceduti dal carattere `$` nel testo `$4.44 and $10.88`. Useremo l'espressione regolare `(?<=\$)[0-9\.]*` che corrisponde a: selezionare tutti i numeri che contengono il carattere `.` e sono preceduti dal carattere `$`. Queste sono le espressioni di guardarsi intorno utilizzate:
+Lookbehinds e lookaheads sono speciali tipi di **_gruppi di caratteri senza cattura_**. Guardarsi intorno sono utilizzati quando uno schema deve essere preceduto o seguito da un altro schema. Ad esempio, pensiamo di dover selezionare i numeri preceduti dal carattere `$` nel testo `$4.44 and $10.88`. Useremo l'espressione regolare `(?<=\$)[0-9\.]*` che corrisponde a: selezionare tutti i numeri che contengono il carattere `.` e sono preceduti dal carattere `$`. Queste sono le espressioni di guardarsi intorno utilizzate:
 
-|Simbolo|Descrizione|
-|:----:|----|
-|?=|Lookahead positivo|
-|?!|Lookahead negativo|
-|?<=|Lookbehind positivo|
-|?<!|Lookbehind negativo|
+| Simbolo | Descrizione         |
+| :-----: | ------------------- |
+|   ?=    | Lookahead positivo  |
+|   ?!    | Lookahead negativo  |
+|   ?<=   | Lookbehind positivo |
+|   ?<!   | Lookbehind negativo |
 
 ### 4.1 Lookahead positivo
 
@@ -390,11 +391,11 @@ Lookbehind negativo è utilizzato per trovare il testo non preceduto da uno spec
 
 Le opzioni (o modificatori) modificano il risultato delle espressioni regolari. Queste opzioni possono essere utilizzate in qualsiasi ordine o combinazione, sono parti integranti di RegExp.
 
-|Opzione|Descrizione|
-|:----:|----|
-|i|Non sensibilità maiuscolo / minuscolo|
-|g|Ricerca globale: trova tutte le corrispondenze, non solo la prima.|
-|m|Multi riga: estende il funzionamento delle ancore su ogni riga.|
+| Opzione | Descrizione                                                        |
+| :-----: | ------------------------------------------------------------------ |
+|    i    | Non sensibilità maiuscolo / minuscolo                              |
+|    g    | Ricerca globale: trova tutte le corrispondenze, non solo la prima. |
+|    m    | Multi riga: estende il funzionamento delle ancore su ogni riga.    |
 
 ### 5.1 Non sensibilità maiuscolo / minuscolo
 
@@ -449,28 +450,26 @@ L'opzione `m` è utilizzata per estendere la corrispondenza in modalità multi r
 [Verifica l'espressione regolare](https://regex101.com/r/E88WE2/1)
 
 ## 6. Corrispondenza vorace vs pigra
+
 Regex ha un funzionamento predefinito vorace, ,significa che la corrispondenza è più estesa possibile. Si può utilizzare `?` per determinare una corrispondenza più pigra, così la corrispondenza è più breve possibile.
 
 <pre>
 "/(.*at)/" => <a href="#learn-regex"><strong>The fat cat sat on the mat</strong></a>. </pre>
-
 
 [Verifica l'espressione regolare](https://regex101.com/r/AyAdgJ/1)
 
 <pre>
 "/(.*?at)/" => <a href="#learn-regex"><strong>The fat</strong></a> cat sat on the mat. </pre>
 
-
 [Verifica l'espressione regolare](https://regex101.com/r/AyAdgJ/2)
-
 
 ## Contribution
 
-* Open a pull request with improvements
-* Discuss ideas in issues
-* Spread the word
-* Reach out with any feedback [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/ziishaned.svg?style=social&label=Follow%20%40ziishaned)](https://twitter.com/ziishaned)
-* Traduzione italiana: Claudio Marconato (cmpro.it)
+- Open a pull request with improvements
+- Discuss ideas in issues
+- Spread the word
+- Reach out with any feedback [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/ziishaned.svg?style=social&label=Follow%20%40ziishaned)](https://twitter.com/ziishaned)
+- Traduzione italiana: Claudio Marconato (cmpro.it)
 
 ## License
 
