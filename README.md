@@ -21,6 +21,8 @@
 * [Polish](translations/README-pl.md)
 * [Русский](translations/README-ru.md)
 * [Tiếng Việt](translations/README-vn.md)
+
+* [العربية](translations/README-ar.md)
 * [فارسی](translations/README-fa.md)
 * [עברית](translations/README-he.md)
 
